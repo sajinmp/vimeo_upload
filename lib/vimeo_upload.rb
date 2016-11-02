@@ -1,4 +1,5 @@
 require "vimeo_upload/version"
+require "httparty"
 
 module VimeoUpload
 
