@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["sajinprasadkm@gmail.com"]
 
   spec.summary       = %q{Upload a video to vimeo}
-  spec.homepage      = ""
+  spec.homepage      = "https://rubygems.org/gems/vimeo_upload"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
