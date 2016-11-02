@@ -12,6 +12,7 @@ module VimeoUpload
     # VimeoUpload.upload(absolute_filepath, filename, vimeo_key)
     # eg;
     # VimeoUpload.upload("#{Rails.root}/public/uploads/video.webm", 'My Video', ENV['api_key'])
+    # Return a video_id that references to the video
 
     auth = "bearer #{api_key}"
 
@@ -88,6 +89,7 @@ module VimeoUpload
     # VimeoUpload.change_title(filename, video_id, vimeo_key)
     # eg;
     # VimeoUpload.upload("'My Video', '123456789', ENV['api_key'])
+    # Returns the video_id
 
     auth = "bearer #{api_key}"
 
@@ -105,6 +107,8 @@ module VimeoUpload
     rescue Errno::EPIPE
       puts "Error occured"
     end
+    
+    return video_id
   end
 
 end
