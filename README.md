@@ -22,7 +22,27 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Require the gem
+
+```ruby
+require 'vimeo_upload'
+```
+
+## Uploading a video
+
+```ruby
+VimeoUpload.upload('absolute_filepath', 'filename', 'api_key')
+```
+
+    eg: VimeoUpload.upload("#{Rails.root}/public/uploads/video.webm", 'My Video', ENV['api_key'])
+
+## Changing video title
+
+```ruby
+VimeoUpload.change_title('filename', 'video_id', 'api_key')
+```
+
+    eg: VimeoUpload.upload("'My Video', '123456789', ENV['api_key'])")
 
 ## Development
 
@@ -32,7 +52,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/vimeo_upload.
+Bug reports and pull requests are welcome on GitHub at https://github.com/sajinmp/vimeo_upload.
 
 
 ## License
