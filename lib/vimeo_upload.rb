@@ -3,8 +3,6 @@ require "vimeo_upload/version"
 module VimeoUpload
 
   # Upload function
-  # VimeoUpload.upload(filepath, filename, vimeo_key)
-
   def self.upload(filepath, filename, api_key)
 
     # Upload a video to vimeo
@@ -74,16 +72,24 @@ module VimeoUpload
     video_id = video_location.split('/')[2]
     
     # change title
-    change_title(filename, video_id)
+    change_title(filename, video_id, api_key)
 
     return video_id
   end
   
 
   # Change video title
-  # VimeoUpload.change_title(filename, video_id)
+  def self.change_title(filename, video_id, api_key)
 
-  def self.change_title(filename, video_id)
+    # Change video title of a video in vimeo
+    # I prefer putting api_key as an environment variable. Use figaro gem if needed
+    # Call function in the following format
+    # VimeoUpload.change_title(filename, video_id, vimeo_key)
+    # eg;
+    # VimeoUpload.upload("'My Video', '123456789', ENV['api_key'])
+
+    auth = "bearer #{api_key}"
+
     uri = URI("https://api.vimeo.com/videos/#{video_id}")
 
     patch_req = Net::HTTP::Patch.new("#{uri.path}?#{uri.query}", initheader = {"Authorization" => auth, "name" => "Test"})
