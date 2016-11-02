@@ -1,3 +1,7 @@
+[![Gem Version](https://badge.fury.io/rb/vimeo_upload.svg)](https://badge.fury.io/rb/vimeo_upload)
+
+[Github](https://github.com/sajinmp/vimeo_upload)
+
 # VimeoUpload
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/vimeo_upload`. To experiment with that code, run `bin/console` for an interactive prompt.
